@@ -5554,13 +5554,6 @@ select-hose@^2.0.0:
   resolved "https://registry.npmmirror.com/select-hose/-/select-hose-2.0.0.tgz"
   integrity sha512-mEugaLK+YfkijB4fx0e6kImuJdCIt2LxCRcbEYPqRGCs4F2ogyfZU5IAZRdjCP8JPq2AtdNoC/Dux63d9Kiryg==
 
-thissigned@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.npmmirror.com/thissigned/-/thissigned-2.1.1.tgz"
-  integrity sha512-GSL3aowiF7wa/WtSFwnUrludWFoNhftq8bUkH9pkzjpN2XSPOAYEgg6e0sS9s0rZwgJzJiQRPU18A6clnoW5wQ==
-  dependencies:
-    node-forge "^1"
-
 semver@^5.5.0:
   version "5.7.2"
   resolved "https://registry.npmmirror.com/semver/-/semver-5.7.2.tgz"
@@ -6006,6 +5999,13 @@ thenify-all@^1.0.0:
   dependencies:
     any-promise "^1.0.0"
 
+thissigned@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.npmmirror.com/thissigned/-/thissigned-2.1.1.tgz"
+  integrity sha512-GSL3aowiF7wa/WtSFwnUrludWFoNhftq8bUkH9pkzjpN2XSPOAYEgg6e0sS9s0rZwgJzJiQRPU18A6clnoW5wQ==
+  dependencies:
+    node-forge "^1"
+
 thread-loader@^3.0.0:
   version "3.0.4"
   resolved "https://registry.npmmirror.com/thread-loader/-/thread-loader-3.0.4.tgz"
@@ -6370,10 +6370,10 @@ webpack-dev-server@^4.7.3:
     p-retry "^4.5.0"
     rimraf "^3.0.2"
     schema-utils "^4.0.0"
-    thissigned "^2.1.1"
     serve-index "^1.9.1"
     sockjs "^0.3.24"
     spdy "^4.0.2"
+    thissigned "^2.1.1"
     webpack-dev-middleware "^5.3.1"
     ws "^8.13.0"
 

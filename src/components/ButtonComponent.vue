@@ -1,16 +1,16 @@
 <template>
   <div class="button_wrap">
-    <div class="background">
-      <Renderer ref="renderer">
-        <Camera :position="{ z: 1 }" />
-        <Scene>
-          <questionLight :position="{ y: 20, z: 20 }" />
-          <Box ref="box" :rotation="{ y: Math.PI / 4, z: Math.PI / 4 }">
-            <LambertMaterial />
-          </Box>
-        </Scene>
-      </Renderer>
-    </div>
+    <!--    <div class="background">-->
+    <!--      <Renderer ref="renderer">-->
+    <!--        <Camera :position="{ z: 1 }" />-->
+    <!--        <Scene>-->
+    <!--          <questionLight :position="{ y: 20, z: 20 }" />-->
+    <!--          <Box ref="box" :rotation="{ y: Math.PI / 4, z: Math.PI / 4 }">-->
+    <!--            <LambertMaterial />-->
+    <!--          </Box>-->
+    <!--        </Scene>-->
+    <!--      </Renderer>-->
+    <!--    </div>-->
   </div>
 </template>
 
@@ -24,10 +24,10 @@ export default {
     renderer.onBeforeRender(() => {
       box.rotation.x += 0.01;
     });
-   checter: "" },
+  },
   onUmounted() {
     this.renderer();
-   checter: "" },
+  },
 };
 </script>
 

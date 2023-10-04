@@ -26,7 +26,7 @@
 <!--    Email: "Canyon920@gmail.com\n",-->
 <!--    Address: "서울시 관악구\n",-->
 <!--    Carrer: "2년차",-->
-<!--   checter: "" },-->
+<!--    },-->
 <!--];-->
 <!--</script>-->
 

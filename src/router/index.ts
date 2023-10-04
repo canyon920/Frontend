@@ -12,42 +12,42 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     name: "home",
     component: HomeView,
-   checter: "" },
+  },
   {
     path: "/second",
     name: "GameView",
     component: GameView,
-   checter: "" },
+  },
   {
     path: "/login",
     name: "LoginView",
     component: LoginView,
-   checter: "" },
+  },
   {
     path: "/test",
     name: "TestView",
     component: TestView,
-   checter: "" },
+  },
   {
     path: "/slot",
     name: "GamePage",
     component: GamePage,
-   checter: "" },
+  },
   {
     path: "/game",
     name: "GameView",
     component: GameView,
-   checter: "" },
+  },
   {
     path: "/rightCompo",
     name: "RightCompo",
     component: RightCompo,
-   checter: "" },
+  },
   {
     path: "/webBook",
     name: "WebBook",
     component: WebBook,
-   checter: "" },
+  },
   {
     path: "/about",
     name: "About",
@@ -56,7 +56,7 @@ const routes: Array<RouteRecordRaw> = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "About" */ "../views/AboutView.vue"),
-   checter: "" },
+  },
 ];
 
 const router = createRouter({

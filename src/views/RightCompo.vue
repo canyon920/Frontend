@@ -10,43 +10,43 @@ const welcome = () => {
 //   amount: {
 //     type: Number,
 //     getContext: Number,
-//    checter: "" },
+//     },
 //   size: {
 //     type: Number,
 //     default: 5,
-//    checter: "" },
+//     },
 //   speed: {
 //     type: Number,
 //     default: 1.5,
-//    checter: "" },
+//     },
 //   wind: {
 //     type: Number,
 //     default: 0,
-//    checter: "" },
+//     },
 //   color: {
 //     type: String,
 //     default: "#fff",
-//    checter: "" },
+//     },
 //   opacity: {
 //     type: Number,
 //     default: 0.8,
-//    checter: "" },
+//     },
 //   swing: {
 //     type: Number,
 //     default: 1,
-//    checter: "" },
+//     },
 //   image: {
 //     type: String,
 //     default: null,
-//    checter: "" },
+//     },
 //   zIndex: {
 //     type: Number,
 //     default: null,
-//    checter: "" },
+//     },
 //   resize: {
 //     type: Boolean,
 //     default: true,
-//    checter: "" },
+//     },
 // });
 
 const snow = ref(null);
@@ -213,7 +213,7 @@ const snow = ref(null);
           <section>
             <div class="section_container">
               <div class="section_wrap">
-                <h1 @click="welcome">Context</h1>
+                <h1 @click="welcome" class="context_pointer">Context</h1>
                 <br /><br /><br />
                 <p>About Context</p>
               </div>
@@ -408,5 +408,9 @@ p {
 
 .button_class:active {
   transform: rotate(2deg);
+}
+
+.context_pointer {
+  cursor: pointer;
 }
 </style>

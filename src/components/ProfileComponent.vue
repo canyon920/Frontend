@@ -21,7 +21,7 @@ const Profile = [
     Email: "Canyon920@gmail.com",
     Address: "서울시 관악구",
     Carrer: "2년차",
-   checter: "" },
+  },
 ];
 
 // for (let i = 0; i < Profile.length; i++) {
@@ -50,20 +50,20 @@ onMounted(() => {
     <section>
       <ul class="profile-wrap">
         <li>
-          <ul class="profile_list">
-            <li>
+          <ul class="profile_unline">
+            <li class="profile_list">
               <div>
                 <p class="profile_key">{{ Object.keys(Profile[0])[0] }}</p>
                 <p>{{ Object.values(Profile[0])[0] }}</p>
               </div>
             </li>
-            <li>
+            <li class="profile_list">
               <div>
                 <p class="profile_key">{{ Object.keys(Profile[0])[1] }}</p>
                 <p>{{ Object.values(Profile[0])[1] }}</p>
               </div>
             </li>
-            <li>
+            <li class="profile_list">
               <div>
                 <p class="profile_key">{{ Object.keys(Profile[0])[2] }}</p>
                 <p>{{ Object.values(Profile[0])[2] }}</p>
@@ -71,19 +71,19 @@ onMounted(() => {
             </li>
           </ul>
           <ul class="profile_list2">
-            <li>
+            <li class="profile_list">
               <div>
                 <p class="profile_key">{{ Object.keys(Profile[0])[3] }}</p>
                 <p>{{ Object.values(Profile[0])[3] }}</p>
               </div>
             </li>
-            <li>
+            <li class="profile_list">
               <div>
                 <p class="profile_key">{{ Object.keys(Profile[0])[4] }}</p>
                 <p>{{ Object.values(Profile[0])[4] }}</p>
               </div>
             </li>
-            <li>
+            <li class="profile_list">
               <div>
                 <p class="profile_key">{{ Object.keys(Profile[0])[5] }}</p>
                 <p>{{ Object.values(Profile[0])[5] }}</p>
@@ -101,17 +101,35 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+.profile_wrap {
+  animation: title_ani 2s ease-in-out;
+}
+
+@keyframes title_ani {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .Profile {
-  margin: 0 auto;
-  color: black;
-  text-align: center;
   width: 48ch;
-  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-size: 1.6em;
-  white-space: pre;
   margin: 200px auto;
+  color: black;
+  font-size: 1.6em;
+  overflow: hidden;
+  white-space: pre;
+  text-align: center;
+  border-right: 3px solid;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
 }
 
 @keyframes typing {
@@ -125,6 +143,7 @@ ul {
     border-color: transparent;
   }
 }
+
 ul {
   list-style: none;
 }
@@ -140,13 +159,13 @@ ul {
   margin-top: 300px;
 }
 
-.profile_list {
+.profile_unline {
   width: 100%;
   display: flex;
   text-align: center;
 }
 
-.profile_list > li {
+.profile_unline > li {
   width: 200px;
   height: 100px;
   list-style: none;
@@ -155,6 +174,16 @@ ul {
   margin: 20px;
 }
 
+.profile_list {
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+}
+
+.profile_list:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #7f7f7f;
+}
 .profile_list2 > li {
   width: 200px;
   height: 100px;
@@ -176,8 +205,8 @@ ul {
 }
 
 .profile_key {
-  background-color: black;
-  color: white;
+  color: black;
+  margin-bottom: 20px;
 }
 
 $color-black: hsl(0, 0%, 5%);
@@ -318,61 +347,5 @@ $porcent-vue: 100;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 0.25em;
   transform: translate(-50%, -50%) rotate(90deg);
-}
-
-//  @keyframes
-
-@keyframes anim_circle-html {
-  to {
-    stroke-dashoffset: strokeDashoffset($porcent-html);
-  }
-}
-
-@keyframes anim_circle-css {
-  to {
-    stroke-dashoffset: strokeDashoffset($porcent-css);
-  }
-}
-
-@keyframes anim_circle-scss {
-  to {
-    stroke-dashoffset: strokeDashoffset($porcent-scss);
-  }
-}
-
-@keyframes anim_circle-js {
-  to {
-    stroke-dashoffset: strokeDashoffset($porcent-js);
-  }
-}
-
-@keyframes anim_circle-ts {
-  to {
-    stroke-dashoffset: strokeDashoffset($porcent-ts);
-  }
-}
-
-@keyframes anim_circle-node {
-  to {
-    stroke-dashoffset: strokeDashoffset($porcent-node);
-  }
-}
-
-@keyframes anim_circle-react {
-  to {
-    stroke-dashoffset: strokeDashoffset($porcent-react);
-  }
-}
-
-@keyframes anim_circle-angular {
-  to {
-    stroke-dashoffset: strokeDashoffset($porcent-angular);
-  }
-}
-
-@keyframes anim_circle-vue {
-  to {
-    stroke-dashoffset: strokeDashoffset($porcent-vue);
-  }
 }
 </style>

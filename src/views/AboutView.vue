@@ -7,9 +7,9 @@ import { defineProps, ref } from "vue";
 // });
 
 const questions = [
-  { id: 1, question: "Question"  checter: "" },
-  { id: 2, question: "Question2"  checter: "" },
-  { id: 3, question: "Question3"  checter: "" },
+  { id: 1, question: "Question" },
+  { id: 2, question: "Question2" },
+  { id: 3, question: "Question3" },
 ];
 
 let question_clear = ref([]);
@@ -20,9 +20,9 @@ questions.map((quest, index) => {
 });
 
 const answers = [
-  { id: 1, question: "Answer"  checter: "" },
-  { id: 2, question: "Answer2"  checter: "" },
-  { id: 3, question: "Answer3"  checter: "" },
+  { id: 1, question: "Answer" },
+  { id: 2, question: "Answer2" },
+  { id: 3, question: "Answer3" },
 ];
 
 const submit = () => {

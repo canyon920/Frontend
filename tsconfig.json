@@ -20,14 +20,14 @@
       "@/*": [
         "src/*"
       ]
-     checter: "" },
+      },
     "lib": [
       "esnext",
       "dom",
       "dom.iterable",
       "scripthost"
     ]
-   checter: "" },
+    },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",

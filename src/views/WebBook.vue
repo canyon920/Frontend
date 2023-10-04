@@ -4,13 +4,11 @@ import { ref } from "vue";
 const left_check = ref(false);
 const right_check = ref(false);
 
-console.log(script);
-
 const left = () => {
   left_check.value = !left_check.value;
 };
 const right = () => {
-  rigSScht_check.value = !right_check.value;
+  right_check.value = !right_check.value;
 };
 </script>
 
@@ -26,7 +24,6 @@ const right = () => {
 
 <style>
 div {
-  color: white;
   margin: 0;
   padding: 0;
 }

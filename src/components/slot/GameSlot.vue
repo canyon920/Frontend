@@ -1,5 +1,6 @@
-<script setup></script>
-<template>Game Slot Example Code</template>
+<template>
+  <div>Hello World</div>
+</template>
 <!--<script setup>-->
 <!--const fooProps = {-->
 <!--  id: 1,-->
