@@ -4,7 +4,7 @@ import GameView from "../views/GameView.vue";
 import LoginView from "../views/Login/LoginView.vue";
 import TestView from "../views/TestView.vue";
 import GamePage from "../views/GamePage.vue";
-import RightCompo from "../views/RightCompo.vue";
+import ContextComponent from "../views/ContextComponent.vue";
 import WebBook from "../views/WebBook.vue";
 
 const routes: Array<RouteRecordRaw> = [
@@ -39,9 +39,9 @@ const routes: Array<RouteRecordRaw> = [
     component: GameView,
   },
   {
-    path: "/rightCompo",
-    name: "RightCompo",
-    component: RightCompo,
+    path: "/context",
+    name: "ContextComponent",
+    component: ContextComponent,
   },
   {
     path: "/webBook",

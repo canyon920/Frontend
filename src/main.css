@@ -1,8 +1,3 @@
-App, div, ul, li, table, th, td, tr, canvas, section {
-    font-family: SBAggro, Helvetica, serif
-}
-
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,6 +14,7 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: SBAggro, Helvetica, serif
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -33,4 +29,63 @@ ol, ul {
 }
 blockquote, q {
     quotes: none;
+}
+
+nav a {
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+}
+
+nav a.router-link-exact-active {
+    color: #42b983;
+}
+
+.HeaderMain > li {
+    list-style: none;
+    color: #23633f;
+    margin: 0 20px;
+}
+
+.HeaderMain {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 0 auto;
+    background-color: white;
+    position: relative;
+    z-index: 99;
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease-out;
+}
+
+.fade-leave-to {
+    opacity: 0;
+}
+
+.slide-fade-enter {
+    transform: translateX(10px);
+    opacity: 0;
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+    transition: all 0.2s ease-in;
+}
+
+.slide-fade-leave-to {
+    transform: translateX(-10px);
+    opacity: 0;
 }

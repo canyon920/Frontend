@@ -22,12 +22,7 @@ const right = () => {
   </div>
 </template>
 
-<style>
-div {
-  margin: 0;
-  padding: 0;
-}
-
+<style scoped>
 .web_book {
   display: flex;
 }

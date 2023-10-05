@@ -1,0 +1,172 @@
+.night_gallery {
+  width: 100%;
+  height: 1020px;
+  background: linear-gradient(#1c2052, #410e6b, #502570);
+  animation: fade_gallery 1s;
+}
+
+@keyframes fade_gallery {
+  0% {
+    opacity: 0;
+    transform: rotate(1deg);
+  }
+  20% {
+    opacity: 0.3;
+    transform: rotate(1deg);
+  }
+  40% {
+    opacity: 0.6;
+    transform: rotate(1deg);
+  }
+  60% {
+    opacity: 0.2;
+    color: white;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bar {
+  width: 400px;
+  height: 400px;
+  background-color: black;
+}
+
+//.snowf-canvas {
+//  width: 100%;
+//  height: 100%;
+//  left: 0;
+//  top: 0;
+//  position: absolute;
+//}
+
+.section_container {
+  width: 100%;
+  color: gray;
+}
+
+.section_wrap {
+  width: 100%;
+  position: relative;
+  animation: sectionAni 1s;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+@keyframes sectionAni {
+  0% {
+    opacity: 0;
+    margin-bottom: 200px;
+  }
+  40% {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.section_wrap > h1:hover {
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  animation: plus 1s;
+}
+
+@keyframes plus {
+  0% {
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.modal_container {
+  width: 100%;
+  height: 800px;
+  margin: 0 auto;
+  color: black;
+  position: fixed;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  animation: modalFade 1s;
+  z-index: 99;
+  background-color: rgba(255, 255, 255, 1);
+  top: 0;
+  
+}
+
+.modal_wrap {
+  width: 100%;
+  height: 1020px;
+  justify-content: center;
+  z-index: 99;
+  margin-top: 400px;
+}
+
+p {
+  color: gray;
+  z-index: 99;
+}
+
+@keyframes modalFade {
+  0% {
+    opacity: 0;
+    height: 200px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.profile_context {
+  font-size: 20px;
+  line-height: 30px;
+  background-image: linear-gradient(
+                  to right,
+                  #009400,
+                  #104081,
+                  rgba(101, 183, 101, 0.9),
+                  #bf52b1,
+                  #009400
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes color_gradient {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.button_class {
+  width: 200px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+}
+
+.button_class:active {
+  transform: rotate(2deg);
+}
+
+.context_pointer {
+  cursor: pointer;
+  padding-top: 200px;
+}

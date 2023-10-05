@@ -50,7 +50,7 @@ const Projects = ["VirtualFlow", "YESCNC", "주식회사에이블유컴즈"];
     </center>
   </div>
 </template>
-<style lang="scss">
+<style scoped lang="scss">
 .home_container {
   width: 100%;
   height: 1020px;
