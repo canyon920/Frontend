@@ -1,85 +1,108 @@
 <script setup>
 import ProfileComponent from "@/components/ProfileComponent";
-
 const Projects = ["VirtualFlow", "YESCNC", "주식회사에이블유컴즈"];
 </script>
 
 <template>
-  <div>
-    <center>
-      <ProfileComponent />
-      <div class="home_container">
-        <ul class="home_unline">
-          <li class="home_line">
-            <div style="justify-content: center">
-              <div class="home_wrap_list">
-                {{ Projects[0] }} &nbsp; <br />2023.08.07 ~ 2023.09.06 <br />
-                <br />
-                <bold> 자동 생성 AI 시스템을 이용한 게임 제작 솔루션 </bold>
-              </div>
-            </div>
-            <br /><br /><br />
-          </li>
-          <li>
-            <div style="justify-content: center">
-              <div class="home_wrap_list">
-                <div>
-                  {{ Projects[1] }} &nbsp; <br />2022.03.20 ~ 2023.01.24 <br />
-                </div>
-                <div>삼성 자동화 시스템 선행 개발</div>
-                <br />
-              </div>
-            </div>
-          </li>
-          <br />
-          <br />
-          <li>
-            <div style="justify-content: center">
-              <div class="home_wrap_list">
-                <div>
-                  {{ Projects[2] }} &nbsp; <br />2021.01 ~ 2021.02 <br />
-                </div>
-                <div>소노호텔 리뉴얼</div>
-                <br />
-              </div>
-            </div>
-            <br />
-          </li>
-        </ul>
+  <div class="home_container">
+    <ProfileComponent />
+    <div class="home_section">
+      <div class="home_title">
+        <div class="home_description">
+          {{ Projects[0] }} &nbsp; <br />2023.08~ 2023.09 <br />
+        </div>
       </div>
-    </center>
+    </div>
+    <div class="home_section">
+      <div class="home_title">
+        {{ Projects[1] }} &nbsp; <br />2022.04 ~ 2023.01 <br />
+        <div class="home_description">
+          <div>[프론트엔드] 삼성 자동화 시스템 선행 개발</div>
+        </div>
+      </div>
+    </div>
+    <div class="home_section">
+      <div class="home_title">
+        {{ Projects[1] }} &nbsp; <br />2021.03 ~ 2023.01 <br />
+        <div class="home_description">
+          <div>[풀스택] 동원훈련 대비시스템 리뉴얼</div>
+        </div>
+      </div>
+    </div>
+    <div class="home_section">
+      <div class="home_title">
+        {{ Projects[2] }} &nbsp; <br />2021.01 ~ 2021.02 <br />
+        <div class="home_description">
+          <div>[풀스택] 소노호텔 리뉴얼</div>
+        </div>
+      </div>
+    </div>
+    <div class="home_section">
+      <div class="home_title">
+        {{ Projects[2] }} &nbsp; <br />
+        <br />
+        <div class="home_description">
+          <div>NS홈쇼핑 리뉴얼</div>
+        </div>
+      </div>
+    </div>
+    <div class="home_section">
+      <div class="home_title">
+        {{ Projects[2] }} &nbsp; <br />
+        <br />
+        <div class="home_description">
+          <div>[UI/UX 디자이너] 디자인</div>
+        </div>
+      </div>
+    </div>
+    <div class="home_section">
+      <div class="home_title">
+        {{ Projects[2] }} &nbsp; <br />
+        <br />
+        <div class="home_description">
+          <div>[웹디자이너] 롸킥스 & 아임낫어휴먼비잉</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
 .home_container {
   width: 100%;
-  height: 1020px;
+}
+.home_section {
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
   background-color: #212526ff;
   color: rgba(255, 255, 255, 0.7);
-
-  .home_unline {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  .home_title {
+    line-height: 300px;
     margin: 0 auto;
-    justify-content: center;
-    justify-items: center;
     text-align: center;
-
-    .home_line {
-      list-style: none;
-      text-decoration: none;
-    }
-    .home_wrap_list {
-      width: 400px;
-      height: 200px;
-      line-height: 200px;
-      margin: 0 auto;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
+    justify-content: center;
+  }
+  .home_description {
+    margin-top: -200px;
+    text-align: center;
+    justify-content: center;
   }
 }
 
-a {
-  text-decoration: none;
-  color: black;
+.home_title:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>
 

@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import AppleHeader from "@/components/apple/AppleHeader";
 
 const file_name = ref("파일을 선택하세요.");
 
@@ -7,34 +8,75 @@ const submit = (e) => {
   this.file_name = e.target.files[0].name;
 };
 
-const data = ref({
-  item: "책갈피",
-  subItems: [
-    { item: "시작 페이지 보기" },
-    { item: "읽기 목록에 추가" },
-    {
-      item: "즐겨찾기",
-      subItems: [
-        { item: "개발 관련" },
-        { item: "LEESTRUMENT" },
-        { item: "자주 가는 곳들" },
-        { item: "관심 제품" },
-        { item: "Tool" },
-      ],
-    },
-  ],
-});
-
-const mac_menu = ref([
-  { id: 1, menu: "Finder" },
-  { id: 2, menu: "파일" },
-  { id: 3, menu: "편집" },
-  { id: 4, menu: "보기" },
-  { id: 5, menu: "이동" },
-  { id: 6, menu: "윈도우" },
-  { id: 7, menu: "도움말" },
-  { id: 8, item: "item명", subItems: [{}, {}, {}, {}] },
+const treeData = ref([
+  {
+    name: "미리보기",
+    children: [
+      { name: "hello" },
+      { name: "world" },
+      {
+        name: "child folder",
+        children: [
+          {
+            name: "child folder",
+            children: [{ name: "hello" }, { name: "world" }],
+          },
+          { name: "hello" },
+          { name: "world" },
+          {
+            name: "child folder",
+            children: [{ name: "hello" }, { name: "world" }],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "파일",
+    children: [
+      { name: "hello" },
+      { name: "world" },
+      {
+        name: "child folder",
+        children: [
+          {
+            name: "child folder",
+            children: [{ name: "hello" }, { name: "world" }],
+          },
+          { name: "hello" },
+          { name: "world" },
+          {
+            name: "child folder",
+            children: [{ name: "hello" }, { name: "world" }],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "편집",
+    children: [
+      { name: "hello" },
+      { name: "world" },
+      {
+        name: "child folder",
+        children: [
+          {
+            name: "child folder",
+            children: [{ name: "hello" }, { name: "world" }],
+          },
+          { name: "hello" },
+          { name: "world" },
+          {
+            name: "child folder",
+            children: [{ name: "hello" }, { name: "world" }],
+          },
+        ],
+      },
+    ],
+  },
 ]);
+const task = ref([]);
 const apple_header_check = ref(false);
 
 const menu_modal = () => {
@@ -52,17 +94,31 @@ const menu_modal = () => {
   </div>
   <div>
     <img src="../../public/img/idontsee.png" />
-    <div style="width: 100%; height: 30px; background-color: gray">
-      <ul class="apple_header_main">
-        <li>
-          <ul class="list_header">
-            <li v-for="menu in mac_menu" :key="menu.id" @click="menu_modal">
-              {{ menu.menu }}
-            </li>
-            <li v-if="second"></li>
-          </ul>
-        </li>
+    <div
+      class="apple_header_main"
+      style="
+        width: 100%;
+        z-index: 9999;
+        display: flex;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(2.5px);
+        -webkit-backdrop-filter: blur(4.5px);
+      "
+    >
+      <ul v-for="tree in treeData" :key="tree" class="app_header">
+        <AppleHeader class="item" :model="tree"></AppleHeader>
       </ul>
+      <!--      <ul class="apple_header_main">-->
+      <!--        <li>-->
+      <!--          <ul class="list_header">-->
+      <!--            <li v-for="menu in mac_menu" :key="menu.id" @click="menu_modal">-->
+      <!--              {{ menu.menu }}-->
+      <!--            </li>-->
+      <!--            <li v-if="second"></li>-->
+      <!--          </ul>-->
+      <!--        </li>-->
+      <!--      </ul>-->
       <div class="apple_bottom">
         <div class="icon"></div>
       </div>
@@ -84,7 +140,7 @@ const menu_modal = () => {
   </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 @font-face {
   font-family: "apple";
   src: url("../../public/font/AppleSDGothicNeoB.ttf");
@@ -195,6 +251,15 @@ img {
   backdrop-filter: blur(4.5px);
   -webkit-backdrop-filter: blur(4.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
+  animation: fade 3s;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opaicty: 1;
+  }
 }
 </style>
 

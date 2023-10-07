@@ -8,7 +8,7 @@
       <li class="right_container">
         <ul class="right_unline">
           <li><router-link to="context">Right Contents</router-link></li>
-          <!--          <li><router-link to="right02">Right Contents02</router-link></li>-->
+          <!--          <li><router-link to="right02">Righㄹt Contents02</router-link></li>-->
         </ul>
       </li>
     </ul>
