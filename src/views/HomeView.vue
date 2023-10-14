@@ -8,59 +8,58 @@ const Projects = ["VirtualFlow", "YESCNC", "주식회사에이블유컴즈"];
     <ProfileComponent />
     <div class="home_section">
       <div class="home_title">
+        {{ Projects[0] }} &nbsp; <br />
+        2023.08~ 2023.09 <br />
         <div class="home_description">
-          {{ Projects[0] }} &nbsp; <br />2023.08~ 2023.09 <br />
+          <div>[프론트엔드] 자동 생성 AI 를 통한 웹 게임 제작 솔루션 ]</div>
         </div>
       </div>
-    </div>
-    <div class="home_section">
-      <div class="home_title">
-        {{ Projects[1] }} &nbsp; <br />2022.04 ~ 2023.01 <br />
-        <div class="home_description">
-          <div>[프론트엔드] 삼성 자동화 시스템 선행 개발</div>
+      <div class="home_section">
+        <div class="home_title">
+          {{ Projects[1] }} &nbsp; <br />2022.04 ~ 2023.01 <br />
         </div>
       </div>
-    </div>
-    <div class="home_section">
-      <div class="home_title">
-        {{ Projects[1] }} &nbsp; <br />2021.03 ~ 2023.01 <br />
-        <div class="home_description">
-          <div>[풀스택] 동원훈련 대비시스템 리뉴얼</div>
+      <div class="home_section">
+        <div class="home_title">
+          {{ Projects[1] }} &nbsp; <br />2021.03 ~ 2023.01 <br />
+          <div class="home_description">
+            <div>[풀스택] 동원훈련 대비시스템 리뉴얼</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="home_section">
-      <div class="home_title">
-        {{ Projects[2] }} &nbsp; <br />2021.01 ~ 2021.02 <br />
-        <div class="home_description">
-          <div>[풀스택] 소노호텔 리뉴얼</div>
+      <div class="home_section">
+        <div class="home_title">
+          {{ Projects[2] }} &nbsp; <br />2021.01 ~ 2021.02 <br />
+          <div class="home_description">
+            <div>[풀스택] 소노호텔 리뉴얼</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="home_section">
-      <div class="home_title">
-        {{ Projects[2] }} &nbsp; <br />
-        <br />
-        <div class="home_description">
-          <div>NS홈쇼핑 리뉴얼</div>
+      <div class="home_section">
+        <div class="home_title">
+          {{ Projects[2] }} &nbsp; <br />
+          <br />
+          <div class="home_description">
+            <div>NS홈쇼핑 리뉴얼</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="home_section">
-      <div class="home_title">
-        {{ Projects[2] }} &nbsp; <br />
-        <br />
-        <div class="home_description">
-          <div>[UI/UX 디자이너] 디자인</div>
+      <div class="home_section">
+        <div class="home_title">
+          {{ Projects[2] }} &nbsp; <br />
+          <br />
+          <div class="home_description">
+            <div>[UI/UX 디자이너] 디자인</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="home_section">
-      <div class="home_title">
-        {{ Projects[2] }} &nbsp; <br />
-        <br />
-        <div class="home_description">
-          <div>[웹디자이너] 롸킥스 & 아임낫어휴먼비잉</div>
+      <div class="home_section">
+        <div class="home_title">
+          {{ Projects[2] }} &nbsp; <br />
+          <br />
+          <div class="home_description">
+            <div>[웹디자이너] 롸킥스 & 아임낫어휴먼비잉</div>
+          </div>
         </div>
       </div>
     </div>
@@ -69,9 +68,11 @@ const Projects = ["VirtualFlow", "YESCNC", "주식회사에이블유컴즈"];
 <style scoped lang="scss">
 .home_container {
   width: 100%;
+  //color: rgba(255, 255, 255, 0.7);
+  //background-color: #212526ff;
 }
 .home_section {
-  width: 80%;
+  width: 100%;
   height: 500px;
   margin: 0 auto;
   text-align: center;
@@ -80,7 +81,7 @@ const Projects = ["VirtualFlow", "YESCNC", "주식회사에이블유컴즈"];
   color: rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   .home_title {
-    line-height: 300px;
+    height: 300px;
     margin: 0 auto;
     text-align: center;
     justify-content: center;

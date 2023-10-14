@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<style>
+<style scoped lang="scss">
 .right_container {
   width: 100%;
   height: 1020px;

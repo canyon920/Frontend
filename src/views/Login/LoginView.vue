@@ -20,11 +20,6 @@ const submitForm = () => {
 };
 
 const result = inject("count");
-
-// const submit = (e) => {
-//   console.log(e.target.value);
-// };
-
 const submit = (e) => {
   console.log(e);
 };
@@ -49,10 +44,14 @@ const password_example = ["test"];
     <div class="confirm_container">
       {{ confirm }}
     </div>
+
+    <!--    <button @click="loginWithKakao">-->
+    <!--      <img src="../../../public/img/kakao_login_medium_narrow.png" />-->
+    <!--    </button>-->
   </div>
 </template>
 
-<style>
+<style scoped>
 .login_container {
   width: 100%;
   margin: 0 auto;

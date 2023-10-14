@@ -11,7 +11,7 @@
     </ul>
   </div>
 </template>
-<style>
+<style scoped lang="scss">
 .footer {
 }
 </style>

@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import AppleHeader from "@/components/apple/AppleHeader";
+import axios from "axios";
 
 const file_name = ref("파일을 선택하세요.");
 
@@ -8,6 +9,12 @@ const submit = (e) => {
   this.file_name = e.target.files[0].name;
 };
 
+const data = async () => {
+  axios
+    .get("localhost:3000")
+    .then((response) => response.data)
+    .catch((e) => console.error(e));
+};
 const treeData = ref([
   {
     name: "미리보기",

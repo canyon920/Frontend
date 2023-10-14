@@ -60,6 +60,6 @@ function addChild() {
   </ul>
 </template>
 
-<style>
+<style scoped lang="scss">
 @import "../../../public/style/appHeader.scss";
 </style>
