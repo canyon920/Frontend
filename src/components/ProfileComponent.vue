@@ -1,5 +1,5 @@
 <script setup>
-const about = "즐기며 성장하는 웹 개발자 김동원 입니다.";
+const about = "Hello, Welcome To World";
 const Profile = [
   {
     name: "김동원",
@@ -15,7 +15,7 @@ const Profile = [
 <template>
   <div id="PROFILE_COMPONENT" class="profile_container">
     <div class="profile_wrap">
-      <p class="about_wrap">{{ about }}</p>
+      <h1 class="about_wrap">{{ about }}</h1>
     </div>
     <section class="section_container">
       <ul class="section_unline">
@@ -33,8 +33,6 @@ const Profile = [
               <p class="profile_key">{{ Object.keys(Profile[0])[2] }}</p>
               <p>{{ Object.values(Profile[0])[2] }}</p>
             </li>
-          </ul>
-          <ul class="section_profile2">
             <li class="profile_list">
               <p class="profile_key">{{ Object.keys(Profile[0])[3] }}</p>
               <p>{{ Object.values(Profile[0])[3] }}</p>
@@ -48,6 +46,7 @@ const Profile = [
               <p>{{ Object.values(Profile[0])[5] }}</p>
             </li>
           </ul>
+          <ul class="section_profile2"></ul>
         </li>
       </ul>
     </section>
